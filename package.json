@@ -6,8 +6,6 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build",
     "preview": "astro preview",
     "astro": "astro"
   },
