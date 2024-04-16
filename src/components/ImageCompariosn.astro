@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import homepageScreenshotOld from "../assets/homepageScreenshotOld.webp";
+import homeScreenExtOpen from "../assets/homeScreenExtOpen.webp";
+---
+
+<div class="max-w-[1200px]">
+  <img-comparison-slider>
+    <Image
+      slot="before"
+      src={homepageScreenshotOld}
+      class="screenshot"
+      style="margin-bottom: calc(-2px - 2%);"
+      alt="Screenshot of default lichess homepage"
+    />
+    <Image
+      slot="after"
+      src={homeScreenExtOpen}
+      class="screenshot"
+      alt="Fade over: Screenshot of homepage with prettierlichess"
+    />
+  </img-comparison-slider>
+</div>

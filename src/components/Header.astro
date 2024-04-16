@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../public/logo.svg";
+---
+
+<div class="w-full">
+  <div class="flex flex-col flex-wrap items-center justify-center">
+    <h1 class="font-normal text-[50px]">
+      <span class="text-white-custom">Sty</span><span class="text-green-custom"
+        >lichess</span
+      >
+    </h1>
+    <Image class={"w-[200px]"} src={logo} alt={"logo"} />
+  </div>
+</div>

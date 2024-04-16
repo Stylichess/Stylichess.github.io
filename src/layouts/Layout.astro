@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <script
+      is:inline
+      src="https://unpkg.com/img-comparison-slider@3/dist/component/component.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/img-comparison-slider@3/dist/collection/styles/initial.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-slate-950">
+    <slot />
+  </body>
+</html>

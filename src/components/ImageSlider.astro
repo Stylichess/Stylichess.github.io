@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import learn from "../assets/learn.webp";
+import analysis from "../assets/analysis.webp";
+import homepageScreenshot from "../assets/homepageScreenshot.webp";
+import game from "../assets/game.webp";
+import Screenshot5 from "../assets/Screenshot5.webp";
+---
+
+<div class="container">
+  <div class="imagesSlider">
+    <Image
+      src={learn}
+      class="sliderImage"
+      id="first"
+      alt="Screenshot of learn section with prettierlichess enabled"
+    />
+    <Image
+      src={analysis}
+      class="sliderImage"
+      alt="Screenshot of analysis section with prettierlichess enabled"
+    />
+    <Image
+      src={homepageScreenshot}
+      class="sliderImage"
+      alt="Screenshot of homepage with prettierlichess enabled"
+    />
+    <Image
+      src={game}
+      class="sliderImage"
+      alt="Screenshot of game with prettierlichess enabled"
+    />
+    <Image
+      src={Screenshot5}
+      class="sliderImage"
+      alt="Screenshot of arena with prettierlichess enabled"
+    />
+  </div>
+</div>
+
+<style>
+  .container {
+    position: relative;
+    width: 100%;
+    margin-top: 160px;
+    cursor: grab;
+  }
+
+  .imagesSlider {
+    display: inline-flex;
+  }
+
+  .container:active {
+    cursor: grabbing;
+  }
+  .sliderImage {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--main-shadow);
+    margin-right: 5vw;
+    pointer-events: none;
+    user-select: none;
+  }
+</style>
+
+<script
+  is:inline
+  src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
+
+<script>
+  const imageWidth = document.getElementById("first")!.offsetWidth;
+  const windowWidth = window.innerWidth;
+  // @ts-ignore
+  const sb = new ScrollBooster({
+    viewport: document.querySelector(".container"),
+    content: document.querySelector(".imagesSlider"),
+    scrollMode: "transform",
+    direction: "horizontal",
+    friction: 0.02,
+    bounceForce: 0.01,
+  });
+
+  sb.scrollTo({
+    x: imageWidth * 2 + windowWidth * 0.1,
+  });
+</script>

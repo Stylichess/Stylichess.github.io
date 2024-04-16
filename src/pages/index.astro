@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ImageCompariosn from "../components/ImageCompariosn.astro";
+import Header from "../components/Header.astro";
+import { LampHeader } from "../components/LampContainer";
+import Button from "../components/Button.astro";
+import ImageSlider from "../components/ImageSlider.astro";
+---
+
+<Layout title="Stylichess">
+  <main
+    class="flex flex-col justify-start items-center px-20 gap-5 font-red-hat-display p-[80px]"
+  >
+    <Header />
+    <ImageCompariosn />
+    <Button
+      text="Download form github"
+      href="https://github.com/Stylichess/stylichess/releases/latest"
+    />
+    <div class="text-white-custom mt-[80px] w-1/2">
+      <a class="text-green-custom" href="https://lichess.org">Lichess</a> is a great
+      platform that provides lots of fantastic free services like free analysis,
+      studies, tournaments, and more. However, the site doesn't feel very contemporary,
+      and this can turn many users off towards other platforms, and ultimately off
+      an incredibly useful and amazing resource.
+      <br />
+      <br />
+      This extension is an attempt to fix that.
+      <br />
+      <br />
+      <strong class="text-green-custom">Stylichess</strong> not only changes the
+      visuals of lichess.org, but also allows users to completely customize the colors
+      of the site as well. Via the extension they have control over the complete
+      color palette. Along with this, they can import and export their color palette's
+      at will. Below are links to a Google Drive folder and a community driven theme
+      library on Github.
+      <span class="text-green-custom">Feel free to add your own designs!</span>
+    </div>
+    <div class="flex items-center justify-center gap-5">
+      <Button
+        href="https://drive.google.com/drive/folders/1QJ0d5MAtUkYnp81l_VBJQwDcDm_oZPav"
+        text="Community Color Google Drive"
+      />
+      <Button
+        href="https://github.com/algertc/prettierlichess-themes"
+        text="Community Driven Theme Library"
+      />
+    </div>
+    <ImageSlider />
+    <LampHeader client:visible />
+    <div class="text-white-custom mt-[80px] w-1/2">
+      <strong class="text-green-custom">Disclaimer:</strong> It's inspiration of
+      <a class="text-green-custom" href="https://prettierlichess.github.io"
+        >prettierlichess extension</a
+      >. This extension is under constant development and the Lichess site is
+      also changing and adding new features. As a result, some elements of the
+      page may not be styled correctly. In general, however, the styling should
+      work in almost all areas of the site. If you notice an element where the
+      styling doesn't work, feel free to report it.
+    </div>
+  </main>
+</Layout>
